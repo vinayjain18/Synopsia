@@ -118,10 +118,13 @@
 	<form action="{% url 'drug_pred' %}" method="post">
         {% csrf_token %}
         <label>Select Gender:</label>
-		<label for="gender">Male</label>
+        <div style="display: flex; flex-direction: row;">
 		<input type="radio" id="gender" name="gender" value="Male">
-        <label for="gender">Female</label>
+        <label for="gender">Male</label>&nbsp;&nbsp;
+        
 		<input type="radio" id="gender" name="gender" value="Female">
+        <label for="gender">Female</label>
+        </div>
 
 		<label for="age">Age</label>
 		<input type="text" id="age" name="age" placeholder="Enter your Age">
